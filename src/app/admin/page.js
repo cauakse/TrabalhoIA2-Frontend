@@ -231,9 +231,13 @@ function ConfusionMatrixTable({ matrix, labels, isDark = false }) {
       <table className="w-full table-fixed border-separate border-spacing-1 text-[11px]">
         <thead>
           <tr>
-            <th className={`w-40 rounded-md px-2 py-2 text-left font-semibold wrap-break-word ${isDark ? 'bg-zinc-800 text-zinc-200' : 'bg-zinc-200 text-zinc-700'}`}>Real \ Predito</th>
+            <th className={`w-40 rounded-md px-2 py-2 text-left font-semibold wrap-break-word ${isDark ? 'bg-zinc-800 text-zinc-200' : 'bg-zinc-200 text-zinc-700'}`}>
+              Real \ Predito
+            </th>
             {labels.map((label) => (
-              <th key={`pred-${label}`} className={`rounded-md px-1 py-2 text-center font-semibold wrap-break-word ${isDark ? 'bg-zinc-800 text-zinc-200' : 'bg-zinc-200 text-zinc-700'}`}>
+              <th
+                key={`pred-${label}`}
+                className={`rounded-md px-1 py-2 text-center font-semibold wrap-break-word ${isDark ? 'bg-zinc-800 text-zinc-200' : 'bg-zinc-200 text-zinc-700'}`}>
                 {getDisplayClassName(label)}
               </th>
             ))}
@@ -922,7 +926,8 @@ export default function AdminPage() {
 
       {confusionMatrixModalOpen ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-label="Matriz de confusão">
-          <div className={`flex max-h-[78vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border shadow-2xl ${isDark ? 'border-zinc-700 bg-zinc-900' : 'border-zinc-200 bg-white'}`}>
+          <div
+            className={`flex max-h-[78vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border shadow-2xl ${isDark ? 'border-zinc-700 bg-zinc-900' : 'border-zinc-200 bg-white'}`}>
             <div className={`flex items-center justify-between border-b px-4 py-3 ${isDark ? 'border-zinc-700' : 'border-zinc-200'}`}>
               <h2 className="text-base font-semibold">Matriz de Confusão</h2>
               <button
