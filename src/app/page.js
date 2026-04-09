@@ -401,11 +401,7 @@ export default function Home() {
                           : undefined
                       }
                       className={`w-full rounded-lg border px-3 py-2 outline-none transition ${isNumeric ? 'pr-24' : ''} ${isDark ? 'border-zinc-700 bg-zinc-800 text-zinc-100 focus:border-zinc-500' : 'border-zinc-300 bg-white text-zinc-900 focus:border-zinc-400'}`}
-                      placeholder={
-                        isNumeric
-                          ? `${numericRule?.min ?? 0} - ${numericRule?.max ?? 100}`
-                          : `Digite ${getFieldLabel(key).toLowerCase()}`
-                      }
+                      placeholder={isNumeric ? `${numericRule?.min ?? 0} - ${numericRule?.max ?? 100}` : `Digite ${getFieldLabel(key).toLowerCase()}`}
                     />
 
                     {isNumeric && numericRule?.unit ? (

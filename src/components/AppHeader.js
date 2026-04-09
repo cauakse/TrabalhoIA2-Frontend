@@ -18,7 +18,7 @@ export default function AppHeader() {
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-3">
         <div>
           <p className={`text-sm font-semibold tracking-wide ${isDark ? 'text-zinc-100' : 'text-zinc-900'}`}>Painel de Obesidade</p>
-          <p className={`text-xs ${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>Navegue entre Predict e Admin</p>
+          <p className={`text-xs ${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>Veja se voce esta gordo</p>
         </div>
 
         <div className="flex items-center gap-2">
@@ -26,7 +26,7 @@ export default function AppHeader() {
             type="button"
             onClick={toggleTheme}
             className={`rounded-lg border px-3 py-2 text-sm font-medium transition ${isDark ? 'border-zinc-700 bg-zinc-900 text-zinc-100 hover:bg-zinc-800' : 'border-zinc-300 bg-white text-zinc-700 hover:bg-zinc-100'}`}>
-            {isDark ? '☀️ Claro' : '🌙 Escuro'}
+            {isDark ? '☀️' : '🌙'}
           </button>
 
           <nav className={`flex items-center gap-2 rounded-xl border p-1 transition-colors ${isDark ? 'border-zinc-700 bg-zinc-900/80' : 'border-zinc-200 bg-zinc-100/80'}`}>
